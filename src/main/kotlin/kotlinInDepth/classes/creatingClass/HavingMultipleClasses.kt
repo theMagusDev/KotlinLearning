@@ -8,6 +8,7 @@ fun main() {
     println("Hello, world!")
 }
 // HavingMultipleClassesKT.java with main() is created under a hood
+// Note: HavingMultipleClassesKT.java is called facade class
 
 /*
 * That is why multiple classes in one file are allowed in Kotlin.
