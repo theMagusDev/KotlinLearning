@@ -22,4 +22,21 @@ fun main() {
     println(person1.appraiseNameLength())
     println(person2.appraiseNameLength())
     println(person3.appraiseNameLength())
+
+    val block = Block("green")
+    Block.BlockProperties.length = 5
+    Block.BlockProperties.width = 5
+    println(Block.BlockProperties.blocksInBox(11, 11))
 }
+
+class Block(val color: String) {
+    object BlockProperties {
+        var length = 6
+        var width = 4
+
+        fun blocksInBox(length: Int, width: Int): Int {
+            return (length / this.length) * (width / this.width)
+        }
+    }
+}
+
