@@ -114,6 +114,9 @@ fun program4() {
         aggregate(numbers, fun(a, b): Int { return a + b })
 }
 
+// Lambdas Expressions are essentially
+// anonymous functions that we can treat as values.
+
 // Similar to local functions, lambdas and anonymous functions can access
 // their closure, or variables defined in their containing declaration.
 // In particular, they can change mutable variables from the outer scope.

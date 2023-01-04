@@ -53,6 +53,8 @@ fun measureExecutionTime(action: () -> Unit): Long {
     return System.nanoTime() - start
 }
 fun program4() {
+    println(measureExecutionTime() { println() }) // 743200 (nanoseconds)
+    // you can omit parentheses from function call with lambda:
     println(measureExecutionTime { println() }) // 743200 (nanoseconds)
 }
 
