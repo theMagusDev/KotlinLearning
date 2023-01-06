@@ -1,7 +1,6 @@
 package practice.lambdas
 
-import kotlinInDepth.basicStatements.functions.increment
-import kotlinInDepth.funcitonalProgramming.higherOrderFunctions.aggregate
+import kotlinInDepth.functionalProgramming.higherOrderFunctions.aggregate
 
 // Task: write a functions which return the result of aggregate function. Use lambdas as parameters.
 // Write sum, max, min and printingSum functions and print their result on intArrayOf(1, 2, 3)
