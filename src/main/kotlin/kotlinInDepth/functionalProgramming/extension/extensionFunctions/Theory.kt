@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension
+package kotlinInDepth.functionalProgramming.extension.extensionFunctions
 
 // The need to extend an existing class is quite common in practice. As a
 // program evolves, a developer may want to add new functions and

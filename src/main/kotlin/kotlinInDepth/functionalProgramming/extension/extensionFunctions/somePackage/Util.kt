@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension.somePackage
+package kotlinInDepth.functionalProgramming.extension.extensionFunctions.somePackage
 
 fun String.truncateString(maxLength: Int): String {
     return if (length <= maxLength) this else substring(0, maxLength)

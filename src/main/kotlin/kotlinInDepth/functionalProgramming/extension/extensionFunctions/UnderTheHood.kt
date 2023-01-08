@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension
+package kotlinInDepth.functionalProgramming.extension.extensionFunctions
 
 fun String.second(): Char {
     if (this.isEmpty()) throw NoSuchElementException("Char sequence is empty.")

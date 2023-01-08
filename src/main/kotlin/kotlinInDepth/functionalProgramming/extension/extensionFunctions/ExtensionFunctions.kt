@@ -1,6 +1,6 @@
-package kotlinInDepth.functionalProgramming.extension
+package kotlinInDepth.functionalProgramming.extension.extensionFunctions
 
-import kotlinInDepth.functionalProgramming.extension.somePackage.truncateString
+import kotlinInDepth.functionalProgramming.extension.extensionFunctions.somePackage.truncateString
 
 // The Extension function is basically a function which can be called as if
 // it were a member of some class. When you define such a function, you put a
@@ -10,6 +10,7 @@ import kotlinInDepth.functionalProgramming.extension.somePackage.truncateString
 fun String.truncate(maxLength: Int): String {
 //    ^         ^
 // Receiver  Extension
+//  type
 
     return if(this.length <= maxLength) this else this.substring(0, maxLength)
 }
@@ -110,7 +111,7 @@ fun program4() {
  */
 
 // Line #3 of the current file:
-// import kotlinInDepth.functionalProgramming.extension.somePackage.truncateString
+// import kotlinInDepth.functionalProgramming.extension.extensionFunctions.truncateString
 
 fun program5() {
     println("Hello".truncateString(3))
