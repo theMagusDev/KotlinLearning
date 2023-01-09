@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension.extensionProperties
+package kotlinInDepth.functionalProgramming.extension.companions
 
 // Before we’ve introduced an idea of the companion object which is
 // a special nested object whose members can be accessed by the name

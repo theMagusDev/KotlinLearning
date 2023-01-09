@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension.extensionProperties
+package kotlinInDepth.functionalProgramming.extension.properties
 
 // Similarly to functions, Kotlin allows you to define extension properties
 // which can be accessed just like any member property.
@@ -66,8 +66,8 @@ fun program3() {
     println("Bye".message) // Hello
 }
 
-// Object definitions can be considered an exception
-// since they have only one instance.
+// Object definitions can be considered
+// an exception since they have only one instance.
 
 object Messages
 val Messages.HELLO by lazy { "Hello" }

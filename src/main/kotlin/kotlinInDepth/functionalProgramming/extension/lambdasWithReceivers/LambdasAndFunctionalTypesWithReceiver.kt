@@ -1,4 +1,4 @@
-package kotlinInDepth.functionalProgramming.extension.extensionProperties
+package kotlinInDepth.functionalProgramming.extension.lambdasWithReceivers
 
 // Similar to functions and properties, Kotlin allows you to utilize extension
 // receivers for lambdas and anonymous functions. Such functional values are
@@ -10,7 +10,7 @@ package kotlinInDepth.functionalProgramming.extension.extensionProperties
 //        ^      ^  ^     ^      ^
 //       (1)    (2)(3)   (4)    (5)
 /*
-* 1 - function value;
+* 1 - functional value name;
 * 2 - receiver object type, function can be called on it;
 * 3 - object's parameter;
 * 4 - return type;
