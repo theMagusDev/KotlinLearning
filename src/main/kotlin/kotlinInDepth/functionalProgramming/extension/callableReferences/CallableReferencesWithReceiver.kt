@@ -21,8 +21,9 @@ fun program1() {
 // two-argument callable reference ::max for a
 // parameter of type Int.(Int) -> Int.
 
-fun max(a: Int, b: Int) = if (a > b) a else b
 fun program2() {
+    fun max(a: Int, b: Int) = if (a > b) a else b
+
     println(aggregate(intArrayOf(1, 2, 3, 4), ::max)) // 4
 }
 
