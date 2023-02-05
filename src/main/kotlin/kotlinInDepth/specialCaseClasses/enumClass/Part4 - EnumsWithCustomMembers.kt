@@ -78,8 +78,7 @@ fun program5() {
 
    static final class MONDAY extends AnotherDayOfTheWeek {
       public final void startWork() {
-         String var1 = "Work week started";
-         System.out.println(var1);
+         System.out.println("Work week started");
       }
 
       MONDAY(String $enum$name, int $enum$ordinal) {

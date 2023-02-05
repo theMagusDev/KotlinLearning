@@ -18,11 +18,11 @@ fun program1() {
 }
 
 // Enums are somewhat similar to object declarations in a sense that they
-//define a set of global constants representing instances of a particular type.
-//Similarly to objects, they are not permitted in contexts where there is no
-//guarantee that such a definition can be available as a global constant. You
-//can’t, for example, put an enum definition into an inner class or function
-//body:
+// define a set of global constants representing instances of a particular type.
+// Similarly to objects, they are not permitted in contexts where there is no
+// guarantee that such a definition can be available as a global constant. You
+// can’t, for example, put an enum definition into an inner class or function
+// body:
 
 fun program2() {
     // enum class Test { A, B, C, D } // Error

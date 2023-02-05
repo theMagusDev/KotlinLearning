@@ -22,6 +22,7 @@ fun program6() {
     CompassDirection.NORTH.ordinal // 0
     CompassDirection.EAST.name // EAST
     CompassDirection.EAST.ordinal // 3
+    println(CompassDirection.EAST.declaringJavaClass)
 }
 
 // Values of a particular enum class are comparable with each other
@@ -70,7 +71,7 @@ fun program10() {
     println(enumValueOf<WeekDay>("THURSDAY")) // THURSDAY
 }
 
-fun main1() {
+fun main() {
     program6()
     program7()
     program8()
