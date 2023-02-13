@@ -1,4 +1,4 @@
-package kotlinInDepth.specialCaseClasses.dataClass
+package kotlinInDepth.specialCaseClasses.dataClass.dataClassesAndTheirOperations
 
 // Kotlin provides a useful feature to declare classes with a
 // primary goal of storing some data. This feature is called data classes.
@@ -111,7 +111,8 @@ fun program7() {
     println(!triple.third) // true
 
     // Pairs can also be constructed using the
-    // infix operation 'to', returning Pair<A, B>:
+    // infix operation 'to', returning Pair<A, B>.
+    // 'to' creates a tuple of type Pair.
 
     val anotherPair = 1 to "two"
     println(pair.first) // 1
