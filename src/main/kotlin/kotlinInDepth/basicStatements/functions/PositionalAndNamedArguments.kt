@@ -31,8 +31,7 @@ fun main() {
     println(swap(s = "Hello", 1, to = 2))
     // println(swap(1, s = "Hello", 2)) // Compilation error
     // println(swap(1, "Hello", to = 2)) // Compilation error
-    fun format(num: Int, radix: Int, pad: Int, prefix: String):
-    String {
+    fun format(num: Int, radix: Int, pad: Int, prefix: String): String {
         var s = num.toString(radix)
         if (pad > 0 && s.length < pad) {
             s = "0".repeat(pad - s.length) + s

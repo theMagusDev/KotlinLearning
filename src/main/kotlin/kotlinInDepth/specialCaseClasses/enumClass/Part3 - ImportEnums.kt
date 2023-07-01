@@ -1,6 +1,6 @@
 package kotlinInDepth.specialCaseClasses.enumClass
 
-// We can void explicit qualification of enum constants by importing them
+// We can avoid explicit qualification of enum constants by importing them
 // at the beginning of the containing file:
 
 import kotlinInDepth.specialCaseClasses.enumClass.DirectionShortened.*

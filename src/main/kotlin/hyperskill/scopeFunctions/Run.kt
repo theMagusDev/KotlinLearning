@@ -16,9 +16,6 @@ as let() - as an extension function of the context object.
 
 Use when:
 
- */
-
-/*
     1) First, when we want to initialize a new object and pass the result
     of a lambda to it. It is important — our new object is independent and
     valuable, unlike in the case of the with() function.

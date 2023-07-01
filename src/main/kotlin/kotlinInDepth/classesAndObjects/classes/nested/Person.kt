@@ -1,4 +1,4 @@
-package kotlinInDepth.classes.nested
+package kotlinInDepth.classesAndObjects.classes.nested
 
 /*
 * In Kotlin, all nested classes are equivalent

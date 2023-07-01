@@ -3,14 +3,14 @@ package kotlinInDepth.objectsAndCompanions.objects
 class Player(val id: Int) {
     object Properties {
         /* Default player speed in playing field – 7 cells per turn */
-        val defaultSpeed = 7
+        var defaultSpeed = 7
 
         fun calcMovePenalty(cell: Int): Int {
             return -1
         }
 
         // But You cannot use the properties and the functions
-        // of the outer class in the inner.
+        // of the outer class in the inner nested object.
         // val superMegaSpeed = superSpeed * 4 // Unresolved reference: superSpeed
     }
 

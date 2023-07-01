@@ -27,9 +27,9 @@ fun program1() {
 
     /* Some theory */
 
-    val isCapitalLetterFunVal = ::isCapitalLetter
+    val isCapitalLetterFunVal: (Char) -> Boolean = ::isCapitalLetter
     // Compile-time:
-    // When created its type is KFunction1<Char, Boolean> (the subtype of kotlin.Function<R>).
+    // When created, its type is KFunction1<Char, Boolean> (the subtype of kotlin.Function<R>).
     // It is the base type of all function references.
     // But later compiler upcasts it to kotlin.Function<R>.
 

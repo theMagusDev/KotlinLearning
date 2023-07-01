@@ -96,7 +96,7 @@ inline fun indexOf(numbers: IntArray, condition: (Int) -> Boolean): Int {
     return -1
 }
 fun program1() {
-    println(indexOf(intArrayOf(5, 4, 3, 2, 1)) {it < 3}) // 2
+    println(indexOf(intArrayOf(5, 4, 3, 2, 1)) {it < 3}) // 3
 }
 
 // Since the indexOf() function is inlined, the compiler will substitute

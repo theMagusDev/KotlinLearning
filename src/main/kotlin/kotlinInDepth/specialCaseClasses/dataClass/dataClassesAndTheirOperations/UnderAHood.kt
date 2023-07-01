@@ -91,7 +91,7 @@ public final class Car {
    }
 
 
-   /* Auto-generated toString() */
+   /* Auto-generated hashCode() */
 
    public int hashCode() {
       int var1 = ((this.model != null ? this.model.hashCode() : 0) * 31

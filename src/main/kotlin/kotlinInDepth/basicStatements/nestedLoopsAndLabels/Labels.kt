@@ -45,8 +45,8 @@ fun foo() {
 fun foo1() {
     listOf(1, 2, 3, 4, 5).forEach {
         if (it == 3) return@forEach
-        // // local return to the caller of the lambda - the forEach loop
+        // local return to the caller of the lambda - the forEach loop
         println(it)
     }
-    println(" done with explicit label")
+    println(" done with implicit label")
 }

@@ -1,4 +1,4 @@
-package kotlinInDepth.classes.inner
+package kotlinInDepth.classesAndObjects.classes.inner
 
 // Note: Inner nested classes object is bound to outer classes object
 
@@ -44,7 +44,7 @@ fun program2() {
 class Outer() {
     val a = 123
 
-    inner class Innter() {
+    inner class Inner() {
         val a = 321
         fun getAFromInner() = this.a
         // 'this' refers to the current instance of an inner class itself

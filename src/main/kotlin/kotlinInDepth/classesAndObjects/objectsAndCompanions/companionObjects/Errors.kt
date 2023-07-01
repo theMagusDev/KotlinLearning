@@ -17,8 +17,8 @@ object topLevelObject {
 
 // Companion objects in Kotlin may be considered a counterpart of
 // Java’s static context. Like statics, companion members share
-//the same global state and can access any member of an enclosing class
-//regardless of its visibility. The crucial difference, however,
+// the same global state and can access any member of an enclosing class
+// regardless of its visibility. The crucial difference, however,
 // is that their global state is an object instance. This gives
 // much more flexibility than Java’s statics as companion objects
 // may have supertypes and passed around like any other object.

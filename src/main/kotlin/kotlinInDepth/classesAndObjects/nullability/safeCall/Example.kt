@@ -2,7 +2,7 @@ package kotlinInDepth.nullability.safeCall
 
 /* Let’s consider one of our earlier examples:
 
-fun readInt() = readLine()!!.toInt()
+fun readInt() = readlnOrNull!!.toInt()
 
 This function works fine as long as your program uses the console
 as its standard I/O. If, however, we’ve started the program
@@ -11,10 +11,10 @@ with KotlinNullPointerException if this file was empty.
 Using the safe call operator, we can rewrite it:
 */
 
-fun readInt(): Int? = readLine()?.toInt()
+fun readInt(): Int? = readlnOrNull()?.toInt()
 /* is equal to the code:
 fun readInt(): Int? {
-    val tmp = readLine()
+    val tmp = readlnOrNull()
     return if (tmp != null) tmp.toInt() else null
 }
  */
@@ -34,7 +34,7 @@ fun main() {
     // In other words, the safe call operator behaves like an
     // ordinary call when its receiver (left-hand operand) is not null.
     // When its receiver is null, however,
-    // it doesn’t perform any calls and simply returns null.
+    // it doesn't perform any calls and simply returns null.
 
     // Similar to || and && operations, safe calls follow
     // a lazy semantics. They do not evaluate call

@@ -1,4 +1,4 @@
-package kotlinInDepth.properties.introToDelegation
+package kotlinInDepth.classesAndObjects.properties.introToDelegation
 
 interface OS {
     val name: String

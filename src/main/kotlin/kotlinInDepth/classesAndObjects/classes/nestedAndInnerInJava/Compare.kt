@@ -1,4 +1,4 @@
-package kotlinInDepth.classes.nestedAndInnerInJava
+package kotlinInDepth.classesAndObjects.classes.nestedAndInnerInJava
 
 class Outer {
     inner class Inner
@@ -7,15 +7,15 @@ class Outer {
 // is basically equivalent to the Java declaration:
 
 /*
-  public class Outer {
+ public class Outer {
 
-    public class Inner {
+     public class Inner {
 
-    }
+     }
 
-    public static class Nested {
+     public static class Nested {
 
-    }
+     }
 
-}
+ }
 */

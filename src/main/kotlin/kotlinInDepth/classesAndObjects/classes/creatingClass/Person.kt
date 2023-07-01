@@ -5,18 +5,17 @@ class Person() { // class is public by default
     /* The line above is equal to Java's:
 
     private String name = "";
-    // All fields are private in Kotlin (putting 'public' will change nothing)
+    // All fields are private in Kotlin bytecode (putting 'public' will change nothing)
 
     // But getters and setters are public by default, so we can use them in main()
+
     // Auto-generated getter
-    @NotNull
     public final String getName() {
        return this.name;
     }
 
     // Auto-generated setter
-    public final void setName(@NotNull String var1) {
-       Intrinsics.checkNotNullParameter(var1, "<set-?>");
+    public final void setName(String var1) {
        this.name = var1;
     }
 

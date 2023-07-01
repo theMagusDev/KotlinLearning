@@ -22,7 +22,7 @@ fun isLetterString(s: String?): Boolean {
 // the nullable String since String? doesn’t have an iterator() method.
 
 // In fact, nullable types may have their own methods and properties
-// thanks to the Kotlin extension mechanism. In Chapter5 we will discuss
+// thanks to the Kotlin extension mechanism. In Chapter 5 we will discuss
 // this in detail.
 
 //  One example is a string concatenation which

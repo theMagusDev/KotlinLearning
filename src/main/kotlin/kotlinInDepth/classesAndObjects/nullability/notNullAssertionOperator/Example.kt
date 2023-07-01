@@ -3,9 +3,9 @@ package kotlinInDepth.nullability.notNullAssertionOperator
 import java.util.*
 
 fun example() {
-    val a = readLine() // String?
-    val b = readLine()!! // String
-    val c = readLine() as String // String
+    val a = readlnOrNull() // String?
+    val b = readlnOrNull()!! // String
+    val c = readlnOrNull() as String // String
     // !! casts Nullable to Non-nullable
 }
 

@@ -12,7 +12,7 @@ class Person3(var name: String, var surname: String) {
     set(value) {
         val names = value.split(" ") // Split string spaceseparated words
         if (names.size != 2) {
-            throw IllegalArgumentException("Invalid full name: ‘$value’")
+            throw IllegalArgumentException("Invalid full name: $value")
         }
         name = names[0]
         surname = names[1]

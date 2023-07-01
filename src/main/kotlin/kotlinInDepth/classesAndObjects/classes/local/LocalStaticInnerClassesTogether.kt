@@ -1,4 +1,4 @@
-package kotlinInDepth.classes.local
+package kotlinInDepth.classesAndObjects.classes.local
 
 // Local classes may contain all the members permitted in any other classes
 // such as functions, properties, constructors, or nested classes.

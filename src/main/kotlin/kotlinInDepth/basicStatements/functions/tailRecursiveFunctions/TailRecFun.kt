@@ -64,7 +64,7 @@ because the sum(array, from + 1, to) call is followed by addition:
 tailrec fun sum(array: IntArray, from: Int = 0, to: Int =
     array.size): Int {
     // Warning: not a tail-recursive call
-    return if (from < to) return array[from] + sum(array, from +
+    return if (from < to) array[from] + sum(array, from +
             1, to) else 0
 }
 

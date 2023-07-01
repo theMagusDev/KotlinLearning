@@ -15,7 +15,7 @@ fun main() {
     // Remember, that Nothing? is a type of the null itself
     // and a subtype of any other nullable type.
 
-    // The largest nullable type Any? is the largest type
+    // The largest nullable type is Any?
     // in the whole Kotlin type system and is considered a supertype
     // of any other type, nullable or not.
     val c: Any? = Any() // can be anything

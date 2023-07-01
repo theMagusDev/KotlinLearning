@@ -12,7 +12,7 @@ object Application { // a singleton
 fun describe(app: Application) = Application.name // Application as a type
 
 fun main() {
-    println(Application) // Application as a value
+    println(Application) // My Application
 }
 
 // Using an object as a type is usually meaningless

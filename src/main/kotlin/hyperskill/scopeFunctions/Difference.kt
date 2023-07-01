@@ -35,12 +35,14 @@ fun main() {
 
     NewMusician("Jonny Greenwood").also {
         it.instrument = "harmonica"
+    }.also {
+        it.band = "Pavement"
     }
 
     NewMusician("Dave Glowl", "Drums", "Nirvana").let { (musicianName, instrument, newBand) ->
         return@let musicianName.length + instrument.length + newBand.count { it == 'a' }
     }
-    // With it, we can pass several parameters and use them as separate parameter members. We can also rename these parameters
+    // With 'it', we can pass several parameters and use them as separate parameter members. We can also rename these parameters
 }
 
 /* Kotlin coding conventions:

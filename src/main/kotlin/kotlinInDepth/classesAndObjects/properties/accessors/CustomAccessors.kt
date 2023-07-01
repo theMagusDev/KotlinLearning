@@ -1,4 +1,4 @@
-package kotlinInDepth.properties.accessors
+package kotlinInDepth.classesAndObjects.properties.accessors
 
 class Person(val name: String, val surname: String) {
 
@@ -66,8 +66,8 @@ fun main() {
 // In other words, there is no fullName variable created.
 // Compiler just generates getFullName() method to compute the result.
 
-// When a property doesn’t use a backing field, it can’t have an initializer
+// When a property doesn't use a backing field, it can’t have an initializer
 // because the initializer is basically a value assigned directly to the backing
-// field on initialization of a class instance. That’s why we didn’t add the
+// field on initialization of a class instance. That’s why we didn't add the
 // initializer for the fullName definition above: being a computed property it
-// doesn’t need one.
+// doesn't need one.

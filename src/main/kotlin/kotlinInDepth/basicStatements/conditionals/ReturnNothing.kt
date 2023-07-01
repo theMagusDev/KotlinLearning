@@ -14,14 +14,18 @@ how it would look like if its simple name was changed:
  */
 
 fun renamePackage(fullName: String, newName: String): String {
-    val i = fullName.indexOf('.')
-    val prefix = if (i >= 0) {
-        fullName.substring(0, i)
+    var st: Int = -1
+    for (i in fullName.indices) {
+        if (fullName[i] == '.')
+            st = i
+    }
+    val prefix = if (st >= 0) {
+        fullName.substring(0, st)
     } else {
         return newName
     }
 
-    return prefix + newName
+    return "$prefix.$newName"
 }
 
 fun main() {

@@ -1,4 +1,4 @@
-package kotlinInDepth.properties.lateinit
+package kotlinInDepth.classesAndObjects.properties.lateinit
 
 import java.io.File
 
@@ -53,7 +53,7 @@ fun main() {
 
 /* Lateinit rules:
 * 1) Property must be mutable since its value may be changed
-* in different parts of out code.
+* in different parts of code.
 *
 * 2) It must have a non-nullable type and may not represent primitive
 * value like Int or Boolean.

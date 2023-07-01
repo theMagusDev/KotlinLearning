@@ -47,6 +47,8 @@ class ConsoleNotifier(logger: ILogger) : ICallbackReceiver, ILogger by logger {
     override fun onAfterAction() = printIt(onAfterStr)
 }
 
+// Note: only ILogger is delegated to logger; ICallbackReceiver is still need to be implemented by hand
+
 /*
 * Above, two interfaces with two corresponding implementations
 * are introduced.

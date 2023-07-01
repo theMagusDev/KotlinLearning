@@ -23,7 +23,7 @@ by the value of functional type.
 
 // The value of the functional type can be invoked
 // just like an ordinary function:
-// op(result, numbers[i]).
+// result = op(result, numbers[i]).
 
 // An alternative way is to use an invoke() method
 // which takes the same arguments:
@@ -99,7 +99,7 @@ fun program7() {
     val inc: (Int) -> Int = shifter(1)
     // now inc looks like: { i -> i + 1 }
     val dec = shifter(-1) // omit the value type
-    // now dec looks like: { i -> i  - 1 }
+    // now dec looks like: { i -> i - 1 }
     println(inc(5)) // 6
     println(dec(5)) // 4
 

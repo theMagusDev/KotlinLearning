@@ -1,4 +1,4 @@
-package kotlinInDepth.classes.local
+package kotlinInDepth.classesAndObjects.classes.local
 
 // Similarly to Java, Kotlin classes
 // can be declared inside the function body.

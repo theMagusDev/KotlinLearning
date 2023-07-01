@@ -25,19 +25,19 @@ public enum Rainbow {
 /* Compiled code (simplified):
  public final class Rainbow extends java.lang.Enum<Rainbow> {
 
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow RED;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow ORANGE;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow YELLOW;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow GREEN;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow BLUE;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow INDIGO;
-  public static final kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow VIOLET;
+  public static final Rainbow RED;
+  public static final Rainbow ORANGE;
+  public static final Rainbow YELLOW;
+  public static final Rainbow GREEN;
+  public static final Rainbow BLUE;
+  public static final Rainbow INDIGO;
+  public static final Rainbow VIOLET;
 
-  java.lang.String color;
-  java.lang.String rgb;
+  String color;
+  String rgb;
 
-  public static kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow[] values();
-  public static kotlinInDepth.specialCaseClasses.enumClass.underTheHood.Rainbow valueOf(java.lang.String);
+  public static Rainbow[] values();
+  public static Rainbow valueOf(String);
 
   public void printFullInfo();
 

@@ -31,7 +31,7 @@ fun describeNumber(number: Int?) = when (number) {
 fun isSingleChar(s: String?) = s != null && s.length == 1
 
 // Note: in order to perform, a smart cast compiler has to ensure that
-// the variable in question doesn’t change its value between
+// the variable in question doesn't change its value between
 // the check and the usage.
 
 // In particular, immutable local variables
@@ -40,9 +40,9 @@ fun isSingleChar(s: String?) = s != null && s.length == 1
 // Mutable variables, however, may prevent smart casts when
 // modified between the null check and the usage:
 fun inputLength() {
-    var s = readLine() // String?
+    var s = readlnOrNull() // String?
     if (s != null) {
-        s = readLine() // String?
+        s = readlnOrNull() // String?
         // No smart cast has changed its value type
         // println(s.length) // Error
     }

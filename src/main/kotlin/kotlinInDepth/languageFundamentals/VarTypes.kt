@@ -35,8 +35,8 @@ fun main() {
 
     val pi = 3.14
     // val one = 1. // Error
-    val pi1 = 3.14E1 // 3.14E1 = 0.314 * 10 = 3.14
-    val thousand = 1E3 // 1E3 = 1000.0
+    val pi1 = 0.314E1 // 3.14E1 = 0.314 * 10**1 = 3.14
+    val thousand = 1E3 // 1E3 = 1 * 10**3 = 1000
 
     val pi2 = 3.14f // Float type
 
@@ -98,8 +98,8 @@ fun main() {
 
     /* Note:
     * Kotlin doesn’t have '&' and '|' operators.
-    * '&' is 'and' in Kotlin
-    * '|' is 'or' in Kotlin
+    * '&' in Java -> 'and' in Kotlin
+    * '|' in Java -> 'or' in Kotlin
      */
 
     /* Comparison and equality */
@@ -179,7 +179,7 @@ fun main() {
 
     // create an array by describing how to compute an element with a given index
     val size = 4
-    val squares = Array(size, { element ->  (element + 1) * (element + 1) })
+    val squares = Array(size, { elementIndex ->  (elementIndex + 1) * (elementIndex + 1) })
     println(squares[3])
 
     /*
@@ -192,7 +192,7 @@ fun main() {
     accompanied by functions similar to arrayOf() and Array()
      */
     val operations = charArrayOf('+', '-', '*', '/', '%')
-    val primitiveSquares = IntArray(10, { element -> (element + 1) * (element + 1) })
+    val primitiveSquares = IntArray(10, { elementIndex -> (elementIndex + 1) * (elementIndex + 1) })
     // Note: in Kotlin, you have to explicitly initialize array elements on its creation.
 
     /* Using arrays */

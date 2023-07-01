@@ -13,9 +13,6 @@ package hyperskill.scopeFunctions
 
 Use when:
 
- */
-
-/*
     1) First, let can be used to invoke one or more functions on
     results of call chains. For example, the following code prints the
     results of two operations on a collection:
@@ -23,7 +20,7 @@ Use when:
 
 // Old way:
 fun program7() {
-    fun printMagicList(list: List<Int>) = print("*** ${list} ***")
+    fun printMagicList(list: List<Int>) = print("*** ${list} ***\n")
 
     val numbers = mutableListOf("one", "two", "three", "four", "five")
     val resultList = numbers.map { it.length }.filter { it > 3 }
@@ -34,7 +31,7 @@ fun program7() {
 
 // New way:
 fun program8() {
-    fun printMagicList(list: List<Int>) = print("*** ${list} ***")
+    fun printMagicList(list: List<Int>) = print("*** ${list} ***\n")
     val numbers = mutableListOf("one", "two", "three", "four", "five")
 
     numbers.map { it.length }.filter { it > 3 }.let {
@@ -49,8 +46,10 @@ fun program8() {
 // you can use the method reference (::) instead of the lambda:
 
 fun program9() {
+    fun printMagicList(list: List<Int>) = print("*** ${list} ***\n")
     val numbers = mutableListOf("one", "two", "three", "four", "five")
-    numbers.map { it.length }.filter { it > 3 }.let(::println)
+
+    numbers.map { it.length }.filter { it > 3 }.let(::printMagicList)
 }
 
 /*
@@ -69,6 +68,7 @@ fun program10() {
         processNonNullString(it)      // OK: 'it' is not null inside '?.let { }'
         it.length // the last lambda expression is the return value
     } ?: -1 // '-1' if 'str' is null
+    println(length)
 }
 
 /*

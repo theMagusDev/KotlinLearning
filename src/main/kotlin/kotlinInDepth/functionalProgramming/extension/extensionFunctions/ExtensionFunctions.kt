@@ -66,7 +66,7 @@ fun program2() {
 class Human(val name: String, val lastName: String) {
     fun fullName() = "$name $lastName"
 }
-fun Human.fullName() = "$name $lastName"
+fun Human.fullName() = "$lastName $name"
 
 fun program3() {
     println(Human("John", "Doe").fullName()) // ???
@@ -140,7 +140,7 @@ fun String?.truncateNullable(maxLength: Int): String? {
     if (this == null) return null 
     return if (this.length <= maxLength) this else this.substring(0, maxLength)
 
-    // Note: ?. is not the safe call. The code in line #137 is equal to:
+    // Note: ?. is not the safe call. The code in line #139 is equal to:
     // fun (String?).truncate(maxLength: Int): String
 }
 fun program6() {

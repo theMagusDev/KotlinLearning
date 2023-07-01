@@ -18,7 +18,7 @@ fun program1() {
 }
 
 // The intention was to return from lambda before printing a number if it
-// doesn’t fit into a range. However, this code won’t compile. This happens
+// doesn't fit into a range. However, this code won’t compile. This happens
 // because a return statement by default is related to the nearest
 // enclosing function defined with fun, get or set keywords. So in our example,
 // we’re trying to return from the main() function instead. Such a statement,
@@ -26,7 +26,7 @@ fun program1() {
 // efficient way that would allow a lambda to force the return of
 // its enclosing function.
 
-// One way to solve the problem is to use is to add the label to our lambda:
+// One way to solve the problem is to add the label to our lambda:
 fun program2() {
     forEach(intArrayOf(1, 2, 3, 4)) lambda@ {
         if (it < 2 || it > 3) return@lambda
@@ -70,7 +70,7 @@ inline fun inlinedForEach(array: IntArray, action: (Int) -> Unit) {
 }
 fun program5() {
     inlinedForEach(intArrayOf(1, 2, 3, 4)) {
-        if (it < 2 || it > 3) return // referring to program4()
+        if (it < 2 || it > 3) return // referring to program5()
         println(it)
     }
 }
@@ -84,7 +84,7 @@ public static final void inlinedForEach(int[] array, Function1 action) {
     }
 }
 
-public static final void program4() {
+public static final void program5() {
     int[] array = new int[]{1, 2, 3, 4};
 
     for(int i = 0; i < array.length; ++i) {
@@ -93,7 +93,7 @@ public static final void program4() {
         // The following code is placed instead of action.invoke(element):
 
         if (element < 2 || element > 3) {
-            return; // referring to the program4() function
+            return; // referring to the program5() function
         }
         System.out.println(element);
     }

@@ -8,15 +8,11 @@ package hyperskill.scopeFunctions
 * Context object is available as 'this'.
 * Returns the context object.
 
-Use when:
-
  */
 
 // apply() is commonly used for object SETTING – for example, if you want to assign new values to class methods or parameters.
 
 // It sounds like "Hey, do apply these settings to this object and its parameters!".
-
-// apply is commonly used for object setting
 
 data class Musician1(var name: String, var instrument: String = "Guitar", var band: String = "Radiohead")
 
@@ -69,14 +65,6 @@ fun program2() {
       System.out.println("a = " + varB + ", b = " + b);
      */
 }
-
-/* with */
-
-/* Here are the main characteristics of the with function:
-* 1) Context object is available as this.
-* 2) It returns the result of a lambda.
-* 3) It isn't an extension function.
- */
 
 fun main() {
     program1()

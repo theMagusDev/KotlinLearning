@@ -1,6 +1,6 @@
 package kotlinInDepth.functionalProgramming.extension.lambdasWithReceivers
 
-// Similar to functions and properties, Kotlin allows you to utilize extension
+// Similar to functions and properties, Kotlin allows you to use extension
 // receivers for lambdas and anonymous functions. Such functional values are
 // described by a special variety of functional types with the receiver.
 
@@ -35,7 +35,7 @@ fun aggregate(numbers: IntArray, operation: (result: Int, element: Int) -> Int):
 
 fun aggregate(numbers: IntArray, operation: Int.(Int) -> Int): Int {
     // Second argument:
-    // A function of type 'Int -> Int' with receiver (i.e. function extending the Int type)
+    // A function of type '(Int) -> Int' with receiver (i.e. function extending the Int type)
     // Name: "operation",
     // Receiver type: Int,
     // Parameter type: Int,
@@ -63,7 +63,7 @@ fun sum1(numbers: IntArray) =
 // The receiver type is specified just before function’s parameter list.
 fun sum2(numbers: IntArray) = aggregate(
     numbers = numbers,
-    operation = fun Int.(number: Int) = this + number
+    operation = fun Int.(result: Int) = this + result
 )
 
 fun sum3(numbers: IntArray) = aggregate(numbers) {this + it}
@@ -106,4 +106,4 @@ fun main() {
 }
 
 // Lambdas with the receiver give you a powerful tool which can be used for
-//building DSL-like API. We will discuss it later in more detail.
+// building DSL-like API. We will discuss it later in more detail.

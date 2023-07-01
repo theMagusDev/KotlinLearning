@@ -15,7 +15,7 @@ val text: String by lazy {
 
 fun program1() {
     while (true) {
-        when (val command = readLine() ?: return@program1) {
+        when (val command = readlnOrNull() ?: return@program1) {
             "print data" -> println(text) // after this line 'text' has initialized String value
             "exit" -> return@program1
         }
@@ -71,7 +71,7 @@ fun program2(args: Array<String>) {
 // It also means that you can use smart
 // casts with local delegated variables:
 fun program3() {
-    val data by lazy { readLine() }
+    val data by lazy { readlnOrNull() }
     if (data != null) {
         // No smart cast, data is nullable here
 

@@ -3,7 +3,7 @@ package kotlinInDepth.specialCaseClasses.enumClass
 // Just like values of any other type, enum variables may be compared against
 // particular values using a when expression. There is, however, an additional
 // benefit when using enums; you can omit an else branch if the 'when'
-// expression is exhaustive, i.e., it contains branches for all possible values
+// expression is exhaustive, i.e. it contains branches for all possible values
 // of an enum type.
 
 enum class Direction {

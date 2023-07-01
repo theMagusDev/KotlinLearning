@@ -35,11 +35,13 @@ class MyNewClass(base: MyInterface) : MyInterface by base {
 }
 
 /*
-class MyNewClass(
-        base: MyInterface)
-        // ^ Here we expect an implementation of MyInterface as a parameter (named "base")
-        : MyInterface by base {
-        // ^ And here we state that MyInterface is implemented by the previously obtained parameter, the one named "base"
+class MyNewClass(base: MyInterface) : MyInterface by base {
+                     ^                         ^
+         Here we expect an          And here we state that MyInterface
+   implementation of MyInterface   is implemented by the previously obtained parameter,
+   as a parameter (named "base")   the one named "base"
+
+
     override val msg = "Delegate sends regards."
 }
 */
