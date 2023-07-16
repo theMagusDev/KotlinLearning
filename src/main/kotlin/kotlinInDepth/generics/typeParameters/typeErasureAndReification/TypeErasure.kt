@@ -1,5 +1,7 @@
 package kotlinInDepth.generics.typeParameters.typeErasureAndReification
 
+import kotlinInDepth.generics.typeParameters.genericDeclaration.part1.map
+
 // There are cases, however, when type parameters can’t
 // replace actual types:
 
@@ -25,6 +27,13 @@ fun projections() {
     val list = listOf(1, 2, 3) // List<Int>
     println(list is List<Number>) // Warning: Check for instance is always 'true'
 //  println(list is List<String>) // Error: Cannot check for instance of erased type: List<String>
+
+    // What if we need to just check that our value is a list without clarifying its
+    // element type? We can’t just write list is List because generic types in
+    // Kotlin must always be accompanied by type arguments. A correct check
+    // looks like this:
+    println(list is List<*>)
+    println(map is Map<*, *>)
 
     // In some cases, though, the compiler has enough information
     // to ensure that type check is valid.
