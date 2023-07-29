@@ -2,13 +2,17 @@ package kotlinInDepth.collections.collection.sequences
 
 // A sequence is a container where objects are not contained but produced
 // while iterating. Those objects are not processed until it is time to use them:
-// that is, sequences are executed lazily. We won't get an intermediate result
+// that is, sequences are executed lazily. We won't get an intermediate collection
 // at the end of each step.
 
 /* Advantages:
  1) Sequences can be infinite
- 2) They allow you to avoid intermediate steps
+ 2) They allow you to avoid unnecessary operations (creating intermediate collections on each step).
 */
+
+/* Note:
+ 1) Sequences do not have iterator
+ */
 
 fun createSequences() {
     // from elements
@@ -25,6 +29,16 @@ fun createSequences() {
         .filter { it % 2 == 0 } // left only even ones
         .take(5) // take the first 5 of them
     println(sequenceOfStrings3.toList()) // [2, 4, 6, 8, 10]
+
+    // provide sequence elements in parts. The builder is implemented
+    // by the sequence() function which accepts an extension
+    // lambda with the SequenceScope receiver type.
+    val numbers = sequence<Int> {
+        yield(0)
+        yieldAll(listOf(1, 2, 3))
+        yieldAll(intArrayOf(4, 5, 6).iterator())
+        yieldAll(generateSequence(10) { if (it < 50) it*3 else null })
+    }
 }
 
 fun sequenceOperations() {
@@ -43,11 +57,11 @@ fun sequenceOperations() {
 }
 
 fun sequenceProcessing() {
-    /* When we process eagerly */
-    // we perform all operations on all the elements
+    /* When we process eagerly (horizontally) */
+    // we perform all operations on all the elements of collection
 
     val withIterator = (1..10)
-        .filter { print("Filter: $it, "); it % 2 == 0 } // filter out the odd numbers
+        .filter { print("Filter: $it, "); it % 2 == 0 } // filter out the odd numbers in whole collection
         .map { print("Mapping: $it, "); it * 2 } // multiply the remaining numbers by 2
         .take(3) // take the first 3 numbers
 
@@ -59,8 +73,8 @@ fun sequenceProcessing() {
     println(withIterator) // [4, 8, 12]
 
 
-    /* When we process lazily */
-    // We perform each operation after the terminal operation has been called
+    /* When we process lazily (vertically) */
+    // We perform each operation after the terminal (generate) operation has been called
 
     val withSequence = (1..10).asSequence()
         .filter { it % 2 == 0 }

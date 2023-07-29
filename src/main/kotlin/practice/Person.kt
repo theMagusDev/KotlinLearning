@@ -1,5 +1,8 @@
 package practice
 
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
+
 class Person (val name: String?) {
 
     fun appraiseNameLength(): String {
