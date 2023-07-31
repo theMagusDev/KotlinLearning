@@ -1,6 +1,8 @@
-package kotlinInDepth.coroutines.introduction.suspendingFunctions
+package kotlinInDepth.coroutines.introduction.suspendFunctions
 
 import kotlinx.coroutines.delay
+
+// Suspend function is a function that could be started, paused, and resume.
 
 suspend fun foo() {
     println("Task started")
